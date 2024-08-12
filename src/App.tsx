@@ -1,4 +1,5 @@
 import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
+import Copyright from "./components/Copyright";
 
 export function getUrlParams(url = window.location.href) {
   let urlStr = url.split("?")[1];
@@ -56,7 +57,12 @@ const App = () => {
     }
     return result;
   }
-  return <div className="myCallContainer main" ref={myMeeting}></div>;
+  return (
+    <>
+      <div className="myCallContainer main" ref={myMeeting}></div>
+      <Copyright />
+    </>
+  );
 };
 
 export default App;
